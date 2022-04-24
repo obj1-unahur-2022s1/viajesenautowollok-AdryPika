@@ -1,22 +1,25 @@
 import remiseras.*
 import oficina.*
 
+
 object melina {
-	var precioPorKm
+	var   precioPorKm
+	
+	method precioPorKm() = precioPorKm - 3
 	
 	method viejaPara(cliente){
 		cliente.valorViaje()
 	}
 	
 	method valorViaje(kilometros){
-		return  precioPorKm - 3 * kilometros
+		return  precioPorKm * kilometros
 	}
-	
-	method precioPorKm() = precioPorKm 
 }
 
+
+
 object ludmila {
-	var precioPorKm = 18
+	const precioPorKm = 18
 	
 	method precioPorKm() = precioPorKm
 	
@@ -28,7 +31,7 @@ object ludmila {
 
 object anaMaria {
 	var precioPorKm
-	var estaEconomicamenteEstable = true
+	const estaEconomicamenteEstable = true
 	
 	method estaEconomicamenteEstable()= estaEconomicamenteEstable
 	

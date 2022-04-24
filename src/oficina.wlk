@@ -38,7 +38,7 @@ object oficina {
 	}
 	
 	method remiseraElegidaParaViaje(cliente, kms){
-		if ( segundaRemisera.precioViaje(cliente, kms) < ( (primeraRemisera.precioViaje (cliente, kms))-30)){
+		if ( segundaRemisera.precioViaje(cliente, kms) < ( (primeraRemisera.precioViaje(cliente, kms))-30)){
 			return segundaRemisera
 		} else {return primeraRemisera}
 	} 
