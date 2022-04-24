@@ -1,10 +1,12 @@
 import clientas.*
  
  object lucia{
+ 	var reemplazoDe 
  	
  	method reemplazoDe(remisera){
- 		remisera.precioViaje()
+ 		 reemplazoDe = remisera 
  	}
+ 	
  	method precioViaje(cliente, kilometros){
  		return 	cliente.valorViaje(kilometros)
  	}
@@ -15,6 +17,8 @@ object roxana {
 	method precioViaje(cliente, kilometros){
 		return 	cliente.valorViaje(kilometros)
 	}
+	
+	method reemplazoDe(){}
 }
 
 object gabriela {
@@ -22,6 +26,7 @@ object gabriela {
 	method precioViaje(cliente, kilometros){
  	return cliente.valorViaje(kilometros) * 1.2
 	}
+	method reemplazoDe(){}
 }
 
 object mariela {
@@ -29,6 +34,7 @@ object mariela {
 	method precioViaje(cliente, kilometros){
 		50.max(cliente.valorViaje(kilometros))
 	}
+	method reemplazoDe(){}
 }
 
 object juana {
@@ -38,4 +44,6 @@ object juana {
 			return 100
 		}else {return 200}
 	}
+	
+	method reemplazoDe(){}
 }

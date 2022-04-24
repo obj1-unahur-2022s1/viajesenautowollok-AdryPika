@@ -18,5 +18,9 @@ test "cuanto cobra"{
 test "viajes 2 km"{
 	assert.equals(43.20, gabriela.precioViaje(ludmila, 2))
 }
-
+test "reemplazos"{
+	lucia.reemplazoDe(gabriela)
+	lucia.precioViaje(ludmila, 10)
+	assert.equals(180, lucia.precioViaje(ludmila, 10))
+}
 
