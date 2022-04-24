@@ -12,7 +12,7 @@ object melina {
 	}
 	
 	method valorViaje(kilometros){
-		return  precioPorKm * kilometros
+		return  precioPorKm-3  * kilometros
 	}
 }
 

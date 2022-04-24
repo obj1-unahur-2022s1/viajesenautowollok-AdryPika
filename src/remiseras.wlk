@@ -5,7 +5,9 @@ import clientas.*
  	method reemplazoDe(remisera){
  		remisera.precioViaje()
  	}
- 	method precioViaje(cliente, kilometros){}
+ 	method precioViaje(cliente, kilometros){
+ 		return 	cliente.valorViaje(kilometros)
+ 	}
  }
 
 object roxana {
