@@ -1,0 +1,22 @@
+import clientas.*
+import oficina.*
+import remiseras.*
+
+test "Ana Maria esta estable" {
+
+	assert.that(anaMaria.estaEconomicamenteEstable())
+
+}
+
+test "cuanto cobra"{
+	
+	assert.equals(180, roxana.precioViaje(ludmila,10) )
+	assert.equals(200, juana.precioViaje(anaMaria,10) )
+	assert.equals(216, gabriela.precioViaje(ludmila,10))
+}
+
+test "viajes 2 km"{
+	assert.equals(43.20, gabriela.precioViaje(ludmila, 2))
+}
+
+
