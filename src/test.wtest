@@ -1,6 +1,10 @@
 import clientas.*
 import oficina.*
 import remiseras.*
+/*
+ * Test: Revisar que habia un test que no pasaba
+ * Recorda que para asegurarte que todo funcione bien te conviene hacer muchos test, los que hicieste quedaron cortos
+ */
 
 test "Ana Maria esta estable" {
 
@@ -20,7 +24,7 @@ test "viajes 2 km"{
 }
 test "reemplazos"{
 	lucia.reemplazoDe(gabriela)
-	lucia.precioViaje(ludmila, 10)
-	assert.equals(180, lucia.precioViaje(ludmila, 10))
+	
+	assert.equals(180 * 1.2, lucia.precioViaje(ludmila, 10))
 }
 

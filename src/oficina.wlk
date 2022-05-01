@@ -3,6 +3,7 @@ import clientas.*
 
 
 object oficina {
+	/*Revisar Cambios */
 	var primeraRemisera 
 	var segundaRemisera
 	
@@ -40,7 +41,9 @@ object oficina {
 	method remiseraElegidaParaViaje(cliente, kms){
 		if ( segundaRemisera.precioViaje(cliente, kms) < ( (primeraRemisera.precioViaje(cliente, kms))-30)){
 			return segundaRemisera
-		} else {return primeraRemisera}
+		} else {
+			return primeraRemisera
+		}
 	} 
 }
 
