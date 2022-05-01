@@ -1,19 +1,23 @@
+/*
+ * Clientes: Regular
+ * Las clientes solo debian calcular el precioPorKm(), No tienen la responsabilidad de calular el total del viaje => viajaPara()
+ * Revisa todas las modificaciones que te realice en el codigo
+ */
 import remiseras.*
 import oficina.*
 
 
 object melina {
-	var   precioPorKm
-	
-	method precioPorKm() = precioPorKm - 3
-	
-	method viejaPara(cliente){
-		cliente.valorViaje()
+	/*
+	 * Tenias que recordar para que clienta esta trabajando
+	 */
+	var trabajandoPara
+	method trabajandoPara(unCliente){
+		trabajandoPara = unCliente
 	}
 	
-	method valorViaje(kilometros){
-		return  precioPorKm-3  * kilometros
-	}
+	method precioPorKm() = trabajandoPara.precioPorKm() - 3
+	
 }
 
 
@@ -23,28 +27,26 @@ object ludmila {
 	
 	method precioPorKm() = precioPorKm
 	
-	method valorViaje(kilometros){
-		return precioPorKm * kilometros
-	}
 }
 
 
 object anaMaria {
-	var precioPorKm
-	const estaEconomicamenteEstable = true
+	/*
+	 * Es innecesario el atributo precioPorKm en anaMaria
+	 * Te falto el método para cambiar estaEconomicamenteEstable a false
+	 */
+	var estaEconomicamenteEstable = true
 	
 	method estaEconomicamenteEstable()= estaEconomicamenteEstable
-	
+	method estaEconomicamenteEstable(unBooleano) {
+		estaEconomicamenteEstable = unBooleano
+	}
 	method precioPorKm(){
 		if ( estaEconomicamenteEstable ) {
-			  precioPorKm = 30
-		} else  {precioPorKm =  25} 
-		
-		return precioPorKm
-	}
-	
-	method valorViaje(kilometros){
-		 return precioPorKm * kilometros
+			return 30
+		} else  {
+		  	return 25
+		 } 
 	}
 }
 
@@ -56,9 +58,5 @@ object teresa {
 	
 	method setprecioPorKm( precioNuevo){
 		precioPorKm = precioNuevo
-	}
-	
-	method valorViaje(kilometros){
-		return precioPorKm * kilometros
 	}
 }
